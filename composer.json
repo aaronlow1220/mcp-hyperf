@@ -1,0 +1,42 @@
+{
+    "name": "atellitech/mcp-hyperf",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf",
+        "mcp",
+        "model-context-protocol"
+    ],
+    "description": "Streamable HTTP MCP server (tools, prompts and resources) that plugs into an existing Hyperf HTTP route.",
+    "autoload": {
+        "psr-4": {
+            "AtelliTech\\Hyperf\\Mcp\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.3",
+        "hyperf/contract": "^3.1",
+        "hyperf/http-server": "^3.1",
+        "psr/container": "^1.0 || ^2.0",
+        "psr/http-message": "^1.0 || ^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^2.1"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "codetest": "php-cs-fixer fix --verbose && phpstan"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "AtelliTech\\Hyperf\\Mcp\\ConfigProvider"
+        }
+    }
+}
